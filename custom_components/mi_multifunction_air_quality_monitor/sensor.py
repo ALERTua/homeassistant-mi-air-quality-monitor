@@ -8,7 +8,7 @@ from homeassistant.components.sensor import PLATFORM_SCHEMA
 from homeassistant.const import (CONF_NAME, CONF_HOST, CONF_TOKEN, CONF_DEVICE_CLASS, TEMP_CELSIUS)
 from homeassistant.exceptions import PlatformNotReady
 from homeassistant.helpers.entity import Entity
-from homeassistant.helpers.translation import flatten
+from homeassistant.helpers.translation import recursive_flatten
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -94,7 +94,7 @@ class XiaomiAirQualityMonitorSensor(Entity):
             attrs.update(info.__dict__.get('data', {}))
         if status:
             attrs.update(status.__dict__.get('data', {}))
-        attrs = flatten(attrs)
+        attrs = recursive_flatten('', attrs)
         return attrs
 
     def parse_data(self):
