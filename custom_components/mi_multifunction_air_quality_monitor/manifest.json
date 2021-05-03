@@ -4,6 +4,7 @@
   "documentation": "https://github.com/ALERTua/homeassistant-xiaomi-multifunction-air-monitor",
   "dependencies": [],
   "codeowners": ["@ALERTua"],
+  "version": "1.0.0",
   "requirements": [
     "python-miio>=0.3.2"
   ]
