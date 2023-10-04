@@ -1,3 +1,4 @@
+**This repository is archived, as I am no longer in possession of such a device. Feel free to fork it, or contact me to transfer the ownership.**
 # homeassistant-xiaomi-multifunction-air-monitor
 XiaoMi Multifunction Air Monitor component for Home Assistant.
 
